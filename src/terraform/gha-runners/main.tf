@@ -130,7 +130,7 @@ module "github_runner" {
   }]
   associate_public_ipv4_address = true
 
-  repository_white_list = ["davejfranco/tf-release"]
+  repository_white_list = ["daveopssh/demo-tf-repo"]
 
   runner_group_name   = local.runner_group_name
   runner_extra_labels = local.runner_labels

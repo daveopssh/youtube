@@ -17,17 +17,17 @@ Default artifacts:
   - runner-binaries-syncer.zip
 
 Defaults:
-  --tag    v7.6.0
+  --tag    v7.10.1
   --prefix github-runner/<tag-without-leading-v>
 
 Examples:
   publish-github-runner-lambdas.sh my-runner-artifacts \
-    --tag v7.6.0 \
-    --prefix github-runner/7.6.0 \
+    --tag v7.10.1 \
+    --prefix github-runner/7.10.1 \
     --region eu-central-1 \
     --profile personal
 
-  publish-github-runner-lambdas.sh s3://my-runner-artifacts --tag v7.6.0
+  publish-github-runner-lambdas.sh s3://my-runner-artifacts --tag v7.10.1
 EOF
 }
 
@@ -44,7 +44,7 @@ fi
 s3_bucket="$1"
 shift
 
-tag="v7.6.0"
+tag="v7.10.1"
 prefix=""
 region=""
 profile=""

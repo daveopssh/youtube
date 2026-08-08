@@ -35,10 +35,10 @@ variable "runner_instance_types" {
 
 variable "github_runner_module_version" {
   type    = string
-  default = "7.9.0"
+  default = "7.10.1"
 }
 
 variable "github_app_id" {
-  type = string
+  type    = string
   default = "placeholder"
 }
