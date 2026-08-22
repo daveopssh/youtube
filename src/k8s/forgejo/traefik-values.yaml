@@ -1,0 +1,13 @@
+# Traefik como Ingress controller (reemplazo de ingress-nginx, retirado en marzo 2026).
+# hostPort + extraPortMappings de kind.yaml: localhost:80 llega al entrypoint web.
+
+ports:
+  web:
+    hostPort: 80
+  websecure:
+    hostPort: 443
+
+ingressClass:
+  enabled: true
+  isDefaultClass: true
+  name: traefik

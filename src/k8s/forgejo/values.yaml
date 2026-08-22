@@ -1,0 +1,39 @@
+# Valores de demo para el Helm chart oficial de Forgejo.
+# Chart 17.x todavía usa la clave `gitea:` (el chart nace del de Gitea).
+#
+# Password y usuario SOLO para laboratorio local. No uses esto en producción.
+# El usuario no puede llamarse `admin` (restricción del chart).
+
+gitea:
+  admin:
+    username: daveops
+    password: DaveOpsDemo123
+    email: daveops@localhost
+  config:
+    APP_NAME: "DaveOps Forgejo"
+    server:
+      DOMAIN: git.localhost
+      ROOT_URL: http://git.localhost
+      SSH_DOMAIN: git.localhost
+      # Puerto que sale en la UI / clone URL (el host no usa 22).
+      SSH_PORT: 2222
+      SSH_LISTEN_PORT: 2222
+
+# hostPort 2222 en el pod + extraPortMappings de kind.yaml = git@git.localhost:2222
+service:
+  ssh:
+    hostPort: 2222
+
+ingress:
+  enabled: true
+  className: traefik
+  hosts:
+    - host: git.localhost
+      paths:
+        - path: /
+          pathType: Prefix
+          port: http
+
+persistence:
+  enabled: true
+  size: 5Gi

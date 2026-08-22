@@ -11,6 +11,7 @@ para que puedas clonar, explorar y reproducir cada demo por tu cuenta.
 | Sección | Descripción | Carpeta |
 |--------|-------------|---------|
 | **[Terraform](./src/terraform/)** | Infraestructura como código (IaC) | [`src/terraform/`](./src/terraform/) |
+| **[Kubernetes](./src/k8s/)** | Clusters, Helm y workloads | [`src/k8s/`](./src/k8s/) |
 | **[Cloud](./src/cloud/)** | Cloud, AWS y plataformas | [`src/cloud/`](./src/cloud/) |
 | **[AI](./src/ai/)** | Inteligencia artificial aplicada a DevOps | [`src/ai/`](./src/ai/) |
 
@@ -27,6 +28,18 @@ Demos de infraestructura como código con [Terraform](https://www.terraform.io/)
 | **gha-runners** | Runners self-hosted de GitHub Actions en AWS (Lambda, SSM, S3, etc.) | [`src/terraform/gha-runners/`](./src/terraform/gha-runners/) |
 
 Índice de la sección: [`src/terraform/README.md`](./src/terraform/README.md)
+
+---
+
+## Kubernetes
+
+Demos de Kubernetes: clusters locales, Helm y aplicaciones self-hosted.
+
+| Demo | Descripción | Código |
+|------|-------------|--------|
+| **forgejo** | Forgejo en kind con Helm (Traefik Ingress, values de demo) | [`src/k8s/forgejo/`](./src/k8s/forgejo/) |
+
+Índice de la sección: [`src/k8s/README.md`](./src/k8s/README.md)
 
 ---
 
@@ -82,6 +95,9 @@ Demos de inteligencia artificial aplicada a flujos DevOps.
     ├── terraform/            # Demos de Terraform
     │   ├── README.md
     │   └── gha-runners/
+    ├── k8s/                  # Demos de Kubernetes
+    │   ├── README.md
+    │   └── forgejo/
     ├── cloud/                # Demos de Cloud
     │   └── README.md
     └── ai/                   # Demos de AI
