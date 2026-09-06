@@ -23,3 +23,5 @@ override.tf.json
 .terraformrc
 terraform.rc
 /src/terraform/gha-runners/.terraform.lock.hcl
+
+SCRIPT.md
