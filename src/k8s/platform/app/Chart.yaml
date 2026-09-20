@@ -1,0 +1,5 @@
+apiVersion: v2
+name: nginx-demo
+description: Nginx demo application served through Traefik with cert-manager TLS
+version: 0.1.0
+type: application

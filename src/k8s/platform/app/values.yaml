@@ -1,0 +1,2 @@
+hostname: nginx.demo.daveops.sh
+awsSecretName: nginx-demo
